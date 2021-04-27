@@ -2,10 +2,10 @@ public class Main {
 
     public static void main(String[] args) {
 
-        double Calc_1 = calcFeetAndInchesToCentimeters(6, 12);
+        //double Calc_1 = calcFeetAndInchesToCentimeters(6, 12);
         //System.out.println(Calc_1);
 
-        //Calling the 1st method to check
+        //Calling the method to calculate into centimeters
         double Calc = calcFeetAndInchesToCentimeters(157);
         System.out.println(Calc + " cm");
 
@@ -30,8 +30,9 @@ public class Main {
 
         if (inches >= 0) {
             double feet = (int) inches / 12;
-            double remainingInches = inches % 12;
-            return calcFeetAndInchesToCentimeters(feet, remainingInches);
+            double remainingInches = inches % 12;           //remaining inches
+            //calling the 1st method to calculate centimeters from feet and inches
+            return calcFeetAndInchesToCentimeters(feet, remainingInches);    //converted feet + remaining inches
         } else {
             return -1;
         }
